@@ -62,8 +62,8 @@ else:
     # 从网络连接
     m.connect()
     # 获取Queue对象
-    task = m.get_task_queue
-    result = m.get_result_queue
+    task = m.get_task_queue()
+    result = m.get_result_queue()
     # 从task去除任务，处理并返回结果
     for i in range(10):
         try:
