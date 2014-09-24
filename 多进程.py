@@ -29,3 +29,60 @@ if __name__ == '__main__':
     p.start()
     p.join() # 等待子进程的结束
     print 'Process end'
+    
+# 进程池
+#进程池的大小，默认等于处理器的 核心数，可改变 p = pool(5)
+from multiprocessing import Pool
+import os, random, time
+
+def long_time_task(name):
+    print 'Run task %s (%s)' % (name, os.getpid())
+    start = time.time()
+    time.sleep(random.random() * 3)
+    end = time.time()
+    print 'Task %s runs %0.2f seconds' % (name, (end - start))
+    
+if __name__ == '__main__':
+    print 'Parent process %s' % os.getpid()
+    p = Pool(9)
+    for i in range(5):
+        p.apply_async(long_time_task, args = (i,))
+    print 'Wait for all subprocess done...'
+    p.close() # close 后进不能在加入process
+    p.join()
+    print 'All subprocess end...'
+    
+# 进程间通讯 Queue
+from multiprocessing import Process, Queue
+import os, random, time
+
+def write(q):
+    for value in ['a', 'b', 'c']:
+        pass
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
