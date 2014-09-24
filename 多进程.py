@@ -52,14 +52,34 @@ if __name__ == '__main__':
     p.join()
     print 'All subprocess end...'
     
-# 进程间通讯 Queue
+# 进程间通讯 Queue 或 Pipes
 from multiprocessing import Process, Queue
 import os, random, time
 
 def write(q):
     for value in ['a', 'b', 'c']:
-        pass
+        print 'Put %s to queue...' % value
+        q.put(value)
+        time.sleep(4)
 
+def read(q):
+    while True:
+        value = q.get(True)
+        print 'Get %s from queue...' % value
+        
+if __name__ == '__main__':
+    # 父进程创建queue，并传给子进程
+    q = Queue()
+    pw = Process(target = write, args = (q,))
+    pr = Process(target = read, args = (q,))
+    # 启动写进程
+    pw.start()
+    # 启动读进程
+    pr.start()
+    # 等待结束
+    pw.join()
+    # 死循环强行结束
+    pr.terminate()
 
 
     
