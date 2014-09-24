@@ -2,16 +2,16 @@
 # -*- coding: utf-8 -*-
 
 # os 模块封装了 fock() 函数，但只适用于Unix/Mac 系统，且只能是Linux版的 Python 才有os.fork()函数
-'''
+
 import os
 
-print 'Process (%s) start...' % os.getpid()
-pid = os.fork()
-if pid == 0: # 子进程
-    print "I'm child process (%s) and my parent is (%s)" % (os.getpid(), os.getppid())
-else:
-    print 'I (%s) just create a child process (%s)' % (os.getpid(), pid)
-'''
+if os.name == 'posix':
+    print 'Process (%s) start...' % os.getpid()
+    pid = os.fork()
+    if pid == 0: # 子进程
+        print "I'm child process (%s) and my parent is (%s)" % (os.getpid(), os.getppid())
+    else:
+        print 'I (%s) just create a child process (%s)' % (os.getpid(), pid)
 
 # 跨平台的 多进程模块 multiprocessing
 from multiprocessing import Process
