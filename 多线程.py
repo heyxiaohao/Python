@@ -23,5 +23,5 @@ if __name__ == '__main__':
 
 # 锁 lock = threading.Lock()  lock.acquire()  lock.release
 
-# ThreadLocal 解决不同线程处理同一个对象时  免去 传参 及 全局变量的方式
+# ThreadLocal 解决不同线程处理同一个对象时  免去 传参 及 全局变量的方式、
 
