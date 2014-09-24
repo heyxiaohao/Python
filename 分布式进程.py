@@ -67,7 +67,7 @@ else:
     # 从task去除任务，处理并返回结果
     for i in range(10):
         try:
-            n = i#task.get(timeout = 5)
+            n = task.get(timeout = 5)
             print 'run task %d * %d...' % (n, n)
             r = '%d * %d = %d' % (n, n, n * n)
             time.sleep(1)
