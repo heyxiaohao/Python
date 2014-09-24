@@ -4,9 +4,10 @@ import multiprocessing
 
 # multiprocessing 的 子模块 managers 将网络通讯封装，可以静默升级 在同一台机器上的 多进程程序，如 只需要将 Queue 通过managers暴露在网上即可
 
-type = 'server'
+type = 'd'
 if type == 'server':
     # 服务器端，负责创建Queue，发布到网络，并向其中写任务，但是分布式的 Queue不能直接拿到，需要通过manager.get_task_queue()获得Queue
+    # 在windows 上跑不了 服务端
     import random, time, Queue
     from multiprocessing.managers import BaseManager
     
@@ -54,7 +55,7 @@ else:
     QueueManager.register('get_task_queue')
     QueueManager.register('get_result_queue')
     # 连接到服务器
-    server_addr = '127.0.0.1'
+    server_addr = '192.168.1.108'
     print 'Connect to server %s...' % server_addr
     # 端口和验证码要正确
     m = QueueManager(address = (server_addr, 5000), authkey = 'abc')
@@ -66,7 +67,7 @@ else:
     # 从task去除任务，处理并返回结果
     for i in range(10):
         try:
-            n = task.get(timeout = 1)
+            n = i#task.get(timeout = 5)
             print 'run task %d * %d...' % (n, n)
             r = '%d * %d = %d' % (n, n, n * n)
             time.sleep(1)
