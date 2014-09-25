@@ -4,12 +4,13 @@
 import socket
 import threading, time
 
-type = 'clident'
+type = 'client'
 if type == 'client':
     # 创建socket AF_INET IPV4  AF_INET6 IPV6
+    address = ('127.0.0.1', 9999)
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     # 建立连接:
-    s.connect(('192.168.1.108', 9999))
+    s.connect(address)
     # 接收欢迎消息:
     print s.recv(1024)
     for data in ['Michael', 'Tracy', 'Sarah']:
@@ -42,8 +43,6 @@ else:
         sock, addr = s.accept()
         # 创建新线程处理
         t = threading.Thread(target = tcplink, args = (sock, addr))
-        
-        
         
         
         
