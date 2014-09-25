@@ -4,7 +4,7 @@
 import socket
 import threading, time
 
-type = 'client'
+type = 'clident'
 if type == 'client':
     # 创建socket AF_INET IPV4  AF_INET6 IPV6
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -31,10 +31,10 @@ else:
             sock.send('Hello %s' % data)
         sock.close()
         print 'Connection from %s:%s closed' % addr
-    
-    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+     
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     # 监听端口
-    s.bind(('0.0.0.0', 9999))
+    s.bind(('127.0.0.1', 9999))
     s.listen(5)
     print 'waiting for connect...'
     while True:
