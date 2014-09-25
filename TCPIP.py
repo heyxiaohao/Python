@@ -4,7 +4,7 @@
 import socket
 import threading, time
 
-type = 'client'
+type = 'clident'
 if type == 'client':
     # 创建socket AF_INET IPV4  AF_INET6 IPV6
     address = ('127.0.0.1', 9999)
@@ -26,7 +26,7 @@ else:
         sock.send('Welcome')
         while True:
             data = sock.recv(1024)
-            time.sleep(1)
+            time.sleep(5)
             if data == 'exit' or not data:
                 break
             sock.send('Hello %s' % data)
@@ -35,7 +35,7 @@ else:
      
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     # 监听端口
-    s.bind(('127.0.0.1', 9999))
+    s.bind(('0.0.0.0', 9999))
     s.listen(5)
     print 'waiting for connect...'
     while True:
@@ -43,6 +43,7 @@ else:
         sock, addr = s.accept()
         # 创建新线程处理
         t = threading.Thread(target = tcplink, args = (sock, addr))
+        t.start()
         
         
         
