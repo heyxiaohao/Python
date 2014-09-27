@@ -1,0 +1,16 @@
+<html>
+<head>
+	<title>ÇëµÇÂ¼</title>
+</head>
+<body>
+	{% if message %}
+	<p style = "color:red" >{{ message }}</p>
+	<% endif %>
+	<form action="/signin" method="post">
+    	<legend>ÇëµÇÂ¼:</legend>
+    	<p><input name="username" placeholder="Username" value="{{ username }}"></p>
+    	<p><input name="password" placeholder="Password" type="password"></p>
+    	<p><button type="submit">µÇÂ¼</button></p>
+	</form>
+</body>
+</html>
