@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-type = 'sqlite3'
+type = 'MySQL'
 
 if type == 'sqlite3':
     # 导入驱动
@@ -32,6 +32,30 @@ if type == 'sqlite3':
     print value
     cursor1.close()
     conn1.close()
+
+elif type == 'MySQL':
+    import mysql.connector
+    
+    conn = mysql.connector.connect(user = 'roor', password = 'wangh', database = 'test', use_unicode = True)
+    cursor = conn.cursor()
+    cursor.execute("create table user (id varchar(20) primary key, name varchar(20))")
+    # 插入记录  MySQL的占位符为 %s
+    cursor.execute('insert into usrer(id, name) values(%s, %s)' % ('1', 'kongl'))
+    print cursor.rowcount()
+    conn.commit()
+    cursor.close()
+    
+    # 查询
+    cursor = conn.cursor()
+    cursor.execute('select * from user where id = %s' % '1')
+    values = cursor.fetchall()
+    print values
+    cursor.close()
+    conn.close()
+    
+    
+else:
+    pass
     
     
     
