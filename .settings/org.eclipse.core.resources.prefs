@@ -1,9 +1,11 @@
 eclipse.preferences.version=1
+encoding//Flask\u6846\u67B6/Flask.py=utf-8
 encoding/Collections\u96C6\u5408\u6A21\u5757.py=utf-8
 encoding/IO\u7F16\u7A0B.py=utf-8
 encoding/ORM\u6846\u67B6SQLAlchemy.py=utf-8
 encoding/TCPIP.py=utf-8
 encoding/UDP.py=utf-8
+encoding/WSGI\u63A5\u53E3(\u539F\u59CB).py=utf-8
 encoding/\u5206\u5E03\u5F0F\u8FDB\u7A0B.py=utf-8
 encoding/\u591A\u7EBF\u7A0B.py=utf-8
 encoding/\u591A\u8FDB\u7A0B.py=utf-8
