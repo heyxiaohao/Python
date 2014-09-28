@@ -40,7 +40,7 @@ elif type == 'MySQL':
     cursor = conn.cursor()
     #cursor.execute("create table user (id varchar(20) primary key, name varchar(20))")
     # 插入记录  MySQL的占位符为 %s
-    cursor.execute('insert into user(id, name) values(%s, %s)', ['2', 'kongl'])
+    cursor.execute('insert into user(id, name) values(%s, %s)', ['1', 'kongl'])
     print cursor.rowcount
     conn.commit()
     cursor.close()
