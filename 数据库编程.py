@@ -36,24 +36,38 @@ if type == 'sqlite3':
 elif type == 'MySQL':
     import mysql.connector
     
-    conn = mysql.connector.connect(user = 'root', password = 'wangh', database = 'test', use_unicode = True)
+    conn = mysql.connector.connect(user = 'root', password = 'qidian', database = 'test', use_unicode = True)
     cursor = conn.cursor()
     #cursor.execute("create table user (id varchar(20) primary key, name varchar(20))")
     # 插入记录  MySQL的占位符为 %s
-    cursor.execute('insert into user(id, name) values(%s, %s)', ['1', 'kongl'])
-    print cursor.rowcount
+    for i in range(20,32,1):
+        cursor.execute('select * from user')
+        values=cursor.fetchall()
+        # print values
+        flag=0
+        for j in range(0,values.__len__(),1):
+           strData =filter(str.isdigit,values[j][0].encode("utf-8"))
+           if int(strData)==i:
+              print values[j][0]
+              flag=1
+        if flag!=1:
+            cursor.execute('insert into user(id, name) values(%s, %s)', [i, 'kongl'])
+            print '插入成功'
+            print cursor.rowcount  # 打印影响的行数
+        else:
+            print '已有数据'
+    # print cursor.rowcount #打印影响的行数
     conn.commit()
     cursor.close()
     
     # 查询
     cursor = conn.cursor()
-    cursor.execute('select * from user')# where id = %s' % '1')
-    values = cursor.fetchall()
-    print values
+    for i in range(0,10,1):
+       cursor.execute('select * from user where id = %s' % i)# where id = %s' % '1')
+       values = cursor.fetchall()
+       print values
     cursor.close()
     conn.close()
-    
-    
 else:
     pass
     
