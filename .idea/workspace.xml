@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="401f97a3-4400-4b01-ba4c-d8283d55c42e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Python基础/DataTypeConvert.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Python基础/for.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Python基础/ifelse.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Python基础/while.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Python基础/class.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Python基础/function.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,6 +16,8 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Python$Dictionary.coverage" NAME="Dictionary Coverage Results" MODIFIED="1593075591053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python基础" />
     <SUITE FILE_PATH="coverage/Python$for.coverage" NAME="for Coverage Results" MODIFIED="1593138952414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python基础" />
+    <SUITE FILE_PATH="coverage/Python$function.coverage" NAME="function Coverage Results" MODIFIED="1593140729426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python基础" />
+    <SUITE FILE_PATH="coverage/Python$class.coverage" NAME="class Coverage Results" MODIFIED="1593142529810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python基础" />
     <SUITE FILE_PATH="coverage/Python$DataTypeConvert.coverage" NAME="DataTypeConvert Coverage Results" MODIFIED="1593076888944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python基础" />
     <SUITE FILE_PATH="coverage/Python$String.coverage" NAME="String Coverage Results" MODIFIED="1593055757774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python基础" />
     <SUITE FILE_PATH="coverage/Python$List.coverage" NAME="List Coverage Results" MODIFIED="1593073108568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python基础" />
@@ -26,11 +26,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="for.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="for.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Python基础/for.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
               <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="function.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Python基础/function.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="321">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Python基础/class.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -59,6 +79,8 @@
         <option value="$PROJECT_DIR$/Python基础/whie.py" />
         <option value="$PROJECT_DIR$/Python基础/while.py" />
         <option value="$PROJECT_DIR$/Python基础/for.py" />
+        <option value="$PROJECT_DIR$/Python基础/function.py" />
+        <option value="$PROJECT_DIR$/Python基础/class.py" />
       </list>
     </option>
   </component>
@@ -129,8 +151,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.for">
-    <configuration name="DataTypeConvert" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.class">
+    <configuration name="class" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -143,25 +165,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python基础/DataTypeConvert.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
-    <configuration name="Dictionary" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python基础" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Python" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python基础/Dictionary.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python基础/class.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -180,6 +184,24 @@
       <module name="Python" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python基础/for.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="function" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python基础" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Python" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python基础/function.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -221,19 +243,19 @@
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.Dictionary" />
-      <item index="1" class="java.lang.String" itemvalue="Python.DataTypeConvert" />
-      <item index="2" class="java.lang.String" itemvalue="Python.ifelse" />
-      <item index="3" class="java.lang.String" itemvalue="Python.while" />
-      <item index="4" class="java.lang.String" itemvalue="Python.for" />
+      <item index="0" class="java.lang.String" itemvalue="Python.ifelse" />
+      <item index="1" class="java.lang.String" itemvalue="Python.while" />
+      <item index="2" class="java.lang.String" itemvalue="Python.for" />
+      <item index="3" class="java.lang.String" itemvalue="Python.function" />
+      <item index="4" class="java.lang.String" itemvalue="Python.class" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.for" />
-        <item index="1" class="java.lang.String" itemvalue="Python.while" />
-        <item index="2" class="java.lang.String" itemvalue="Python.ifelse" />
-        <item index="3" class="java.lang.String" itemvalue="Python.DataTypeConvert" />
-        <item index="4" class="java.lang.String" itemvalue="Python.Dictionary" />
+        <item index="0" class="java.lang.String" itemvalue="Python.class" />
+        <item index="1" class="java.lang.String" itemvalue="Python.function" />
+        <item index="2" class="java.lang.String" itemvalue="Python.for" />
+        <item index="3" class="java.lang.String" itemvalue="Python.while" />
+        <item index="4" class="java.lang.String" itemvalue="Python.ifelse" />
       </list>
     </recent_temporary>
   </component>
@@ -353,6 +375,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python基础/function.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python基础/class.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
           <folding />
         </state>
       </provider>
